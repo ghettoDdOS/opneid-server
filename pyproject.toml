@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "opneid-server"
+version = "0.1.0"
+description = ""
+authors = ["ghettoddos <pen.egor2002@gmai.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = { extras = ["standard"], version = "^0.115.4" }
+pydantic-settings = "^2.6.1"
+pydantic-extra-types = "^2.10.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.7.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 79
+target-version = "py312"
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "B", "Q", "I", "PL", "SIM"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
